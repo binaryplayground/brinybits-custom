@@ -14,3 +14,10 @@
  * Text Domain:       brinybits-custom
  */
 
+add_action('wp_head', 'brinybits_add_typekit');
+
+function brinybits_add_typekit(){
+	if ( ! is_admin() ) { 
+		echo '<link rel="stylesheet" href="https://use.typekit.net/jyb5iaa.css">';
+	}
+};
