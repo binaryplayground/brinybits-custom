@@ -36,4 +36,4 @@ function add_loginout_block_to_primary_navigation( $hooked_block_types, $relativ
 
 	return $hooked_block_types;
 }
-add_filter( 'hooked_block_types', 'add_loginout_block_to_primary_navigation', 10, 4 );
+//add_filter( 'hooked_block_types', 'add_loginout_block_to_primary_navigation', 10, 4 );
