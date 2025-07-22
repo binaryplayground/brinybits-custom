@@ -38,3 +38,15 @@ function brinybits_login_logo_url() {
     return get_bloginfo( 'wpurl' );
 }
 add_filter( 'login_headerurl', 'brinybits_login_logo_url' );
+
+/**
+ * Change login logo
+ */
+function brinybits_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a {
+            background-image: url(<?php echo esc_url( plugins_url( 'assets/logo.png', __FILE__ ) )  ?>); !important;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'brinybits_login_logo' );
