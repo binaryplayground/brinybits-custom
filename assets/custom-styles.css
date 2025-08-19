@@ -1,0 +1,181 @@
+/* Clean Minimal EDD Forms Styling */
+
+/* Base form styling */
+.edd_form {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Fieldset styling */
+.edd_form fieldset {
+  border: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
+}
+
+/* Legend styling */
+.edd_form legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+
+/* Paragraph containers */
+.edd_form p {
+  margin: 0 0 1.25rem 0;
+}
+
+/* Label styling */
+.edd_form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Input field styling */
+.edd_form .edd-input,
+.edd_form .edd-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Input focus states */
+.edd_form .edd-input:focus,
+.edd_form .edd-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Select dropdown styling */
+.edd_form select.edd-select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5rem 1.5rem;
+  padding-right: 3rem;
+}
+
+/* Checkbox styling */
+.edd_form input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+}
+
+.edd_form .edd-login-remember label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* Button styling */
+.edd_form .edd-submit {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.edd_form .edd-submit:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.edd_form .edd-submit:active {
+  transform: translateY(0);
+}
+
+/* Lost password link */
+.edd-lost-password {
+  text-align: center;
+}
+
+.edd-lost-password a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.edd-lost-password a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Required field indicators */
+.edd_form .edd-required {
+  border-color: #e74c3c;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .edd_form {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .edd_form legend {
+    font-size: 1.1rem;
+  }
+  
+  .edd_form .edd-submit {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Specific form adjustments */
+#edd_login_form {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+#edd_profile_editor_form fieldset {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+#edd_profile_editor_form fieldset + fieldset {
+  margin-top: 2rem;
+}
+
+/* Error states */
+.edd_form .edd-input.error {
+  border-color: #e74c3c;
+  background-color: #fdf2f2;
+}
+
+/* Success states */
+.edd_form .edd-input.success {
+  border-color: #27ae60;
+  background-color: #f0f9f4;
+}
