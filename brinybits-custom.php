@@ -62,7 +62,8 @@ add_action( 'login_enqueue_scripts', 'brinybits_login_logo' );
  * Add custom styles
  */
 function brinybits_custom_styles() {
-    $file = plugins_url( 'assets/custom-styles.css', __FILE__ );
-    wp_enqueue_style( 'brinybits-custom-styles', $file, array(), '0.0.1', 'all' );
+    $dir = plugin_dir_path( __FILE__ ) . 'assets/custom-styles.css';
+    $url = plugins_url( 'assets/custom-styles.css', __FILE__ );
+    wp_enqueue_style( 'brinybits-custom-styles', $url, array(), filemtime( $dir ), 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'brinybits_custom_styles', PHP_INT_MAX );
